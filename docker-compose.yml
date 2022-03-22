@@ -1,0 +1,26 @@
+version: "3.1"
+services:
+  # MySQL Service
+  db:
+    platform: linux/x86_64
+    build: ./api/docker/db/
+    container_name: mvc-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db_mvc
+      MYSQL_USER: hakimajaman
+      MYSQL_PASSWORD: password
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - mvc-network
+    volumes:
+      - ./api/.tmp/db-data:/var/lib/mysql
+
+# Docker Networks
+networks:
+  rtubk-network:
+    driver: bridge
