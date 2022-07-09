@@ -11,6 +11,14 @@ module.exports = (env, argv) => {
     // devtool: "cheap-module-source-map",
     entry: {
       homepage: path.resolve(entryDirectory, "homepage/index.jsx"),
+      informasiKoridor: path.resolve(
+        entryDirectory,
+        "informasi-koridor/index.jsx"
+      ),
+      jadwalKeberangkatan: path.resolve(
+        entryDirectory,
+        "jadwal-keberangkatan/index.jsx"
+      ),
     },
     output: {
       path: path.resolve(__dirname, "./app/assets/dist"),

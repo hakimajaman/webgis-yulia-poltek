@@ -1,13 +1,9 @@
 import "../../../assets/styles/global.scss";
 import React from "react";
-import Sidebar from "../../components/Sidebar";
+import MainLayout from "../../layouts/main";
 
 const HomePage = () => {
-  return (
-    <div>
-      <Sidebar />
-    </div>
-  );
+  return <MainLayout>hehehe</MainLayout>;
 };
 
 export default HomePage;

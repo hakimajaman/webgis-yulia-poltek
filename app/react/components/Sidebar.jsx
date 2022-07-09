@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const Sidebar = () => {
   const [openNavbar, setOpenNavbar] = useState(false);
-  const [urlPath, setUrlPath] = useState("/");
+  const [urlPath, setUrlPath] = useState("");
 
   useEffect(() => {
     setUrlPath(window.location.pathname);
