@@ -1,0 +1,119 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+// tailwind responsive media queries:
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+.navbar-layout {
+  position: fixed;
+  background-color: rgb(185, 215, 249);
+  width: 100%;
+  height: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: all 0.3s;
+
+  @media (min-width: $lg) {
+    height: 100%;
+    width: 300px;
+  }
+}
+
+.navbar {
+  // display: flex;
+
+  h1 {
+    margin-bottom: 10px;
+    color: rgb(250, 250, 250);
+  }
+
+  h3 {
+    margin: 0px;
+    color: rgb(250, 250, 250);
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 15;
+    right: 100;
+    height: 50px;
+    border: 2px solid rgb(151, 194, 243);
+    border-radius: 10px;
+    background-color: rgba(151, 194, 243, 0.4);
+    color: rgb(248, 248, 248);
+  }
+
+  @media (min-width: $lg) {
+    display: block;
+    button {
+      display: none;
+    }
+  }
+}
+
+.collapse-navbar {
+  height: 310px;
+
+  nav {
+    display: block;
+  }
+
+  @media (min-width: $lg) {
+    height: 100%;
+  }
+}
+
+.not-collapse-navbar {
+  nav {
+    display: none;
+  }
+}
+
+.sidebar {
+  nav {
+    position: absolute;
+    top: 100px;
+    a {
+      padding-left: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      display: block;
+      color: rgb(250, 250, 250);
+      font-size: 18px;
+      border-radius: 7px;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: rgb(165, 200, 240);
+        color: rgb(113, 128, 146);
+      }
+    }
+  }
+
+  @media (min-width: $lg) {
+    nav {
+      position: static;
+      display: block;
+      margin-top: 30px;
+    }
+  }
+}
+
+.nav-active {
+  background-color: rgb(165, 200, 240);
+  color: rgb(113, 128, 146);
+}
